@@ -3,7 +3,7 @@ Analyzing live phishing samples to extract Indicators of Compromise (IOCs), trac
 
 
 ## Tools Utilized
-* [cite_start]**PhishTank:** For sourcing live, safe phishing email templates[cite: 41, 113].
+* [cite_start]**PhishTank:** For sourcing live, safe phishing domain templates[cite: 41, 113].
 * [cite_start]**MXToolbox:** For header extraction and IP tracing[cite: 41, 114].
 * [cite_start]**VirusTotal:** For scanning extracted IPs and domains against global threat intelligence databases[cite: 41, 116].
 
@@ -12,7 +12,7 @@ Analyzing live phishing samples to extract Indicators of Compromise (IOCs), trac
 ## Workflow & Analysis Steps
 
 ### 1. Sourcing the Malicious Payload
-[cite_start]I began the investigation by downloading a safe, real phishing email file from PhishTank to investigate a live, real-world sample[cite: 113, 344].
+[cite_start]I began the investigation by downloading a safe, real phishing website file from PhishTank to investigate a live, real-world sample[cite: 113, 344].
 
 > **[ 🖼️ INSERT SCREENSHOT 1 HERE ]**
 > *(Note for you: Take a screenshot of the PhishTank page showing the specific phishing email submission you chose to analyze.)*
