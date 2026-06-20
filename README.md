@@ -20,8 +20,8 @@ I isolated an active, online credential-harvesting campaign from the PhishTank g
 ### 2. Threat Intelligence Reputation Audit
 With the target domain identified, I immediately queried VirusTotal to cross-reference the component against upstream security vendor databases. This scan provides initial data on whether global firewall networks, web proxies, and security providers have already actively blacklisted this asset.
 
-> **[ 🖼️ INSERT SCREENSHOT 2 HERE ]**
-> *(Note for Zavier: Grab a screenshot of your VirusTotal results page highlighting the red flags, detection ratio, and specific malicious categorizations).*
+<img width="1897" height="933" alt="image" src="https://github.com/user-attachments/assets/977f7160-10ff-405e-aefc-b50d33e46ec6" />
+
 
 ### 3. Infrastructure Tracing & IP Resolution
 To uncover where the adversary is hosting this phishing campaign, I ran the domain through MXToolbox's DNS and WHOIS query tools. This allowed me to resolve the domain to its true destination IP address, identify the hosting provider/Autonomous System Number (ASN), and analyze the domain registration date.
