@@ -1,91 +1,49 @@
-# Phishing-Analysis
+# Malicious URL & Phishing Infrastructure Analysis
 
-Analyzing live phishing samples to extract Indicators of Compromise (IOCs), trace spoofed fake websites, and draft an enterprise-level incident triage report.
+Analyzing live phishing deployments to extract Indicators of Compromise (IOCs), map adversarial hosting infrastructure, and draft an enterprise-level incident triage report.
 
+## 🧰 Tools Utilized
 
-
-
-
-## Tools Utilized
-
-* **PhishTank:** For sourcing live, safe phishing domain templates.
-
-* **MXToolbox:** For header extraction and IP tracing.
-
-* **VirusTotal:** For scanning extracted IPs and domains against global threat intelligence databases.
-
-
+* **PhishTank:** For threat identification and capturing live, active phishing URLs.
+* **MXToolbox (DNS/WHOIS Lookup):** For domain name system resolution, identifying hosting providers, and checking registrar records.
+* **VirusTotal:** For cross-referencing malicious domains against global threat intelligence feeds and reputation databases.
 
 ---
 
+## 🔍 Workflow & Analysis Steps
 
-
-## Workflow & Analysis Steps
-
-
-
-### 1. Sourcing the Malicious Payload
-
-I began the by investigating a safe, real phishing website (hxxps://capital-trustblank[.]online/) from PhishTank to investigate a live, real-world sample.
-
-
+### 1. Threat Identification & Sourcing
+I isolated an active, online credential-harvesting campaign from the PhishTank global threat stream targeting financial or trust institutions under **Submission #9458368**. The target threat vector is the live malicious root domain: `capital-trustblank.online`.
 
 <img width="2850" height="1557" alt="image" src="https://github.com/user-attachments/assets/ff4ddae2-e31e-458f-9131-42a4d2482926" />
 
-
-
-
-
-### 2. Header Extraction & IP Tracing
-
-To uncover the sender's true identity, I extracted the email headers and pasted them into MXToolbox. This allowed me to bypass the spoofed "From" address and pinpoint the actual server IP address that dispatched the malicious email.
-
-
+### 2. Infrastructure Tracing & IP Resolution
+To uncover where the adversary is hosting this phishing campaign, I ran the domain through MXToolbox's DNS and WHOIS query tools. This allowed me to resolve the domain to its true destination IP address, identify the hosting provider/Autonomous System Number (ASN), and analyze the domain registration date.
 
 > **[ 🖼️ INSERT SCREENSHOT 2 HERE ]**
+> *(Note for Zavier: Snag a screenshot of the MXToolbox DNS or WHOIS results page clearly showing the resolved IP address and hosting network provider of the website).*
 
-> [_]*(Note for you: Snag a screenshot of the MXToolbox results page clearly highlighting the true Sender IP address you uncovered)*
+### 3. Operational Security (OpSec) Defanging
+To ensure absolute safety during documentation and prevent accidental execution of the malicious asset, I extracted the suspicious strings and processed them into a defanged format. This neutralizes the link, rendering it completely unclickable in standard markdown viewers.
 
-
-
-### 3. Defanging the Malicious Links
-
-As a critical safety precaution, I extracted the malicious URLs embedded in the email and defanged them (e.g., converting `http` to `hxxp`). This ensures that the links cannot be accidentally clicked or executed while reviewing the incident notes.
-
-
+* **Raw Malicious URL:** `https://capital-trustblank.online/`
+* **Defanged Operational URL:** `hxxps://capital-trustblank[.]online/`
 
 > **[ 🖼️ INSERT SCREENSHOT 3 HERE ]**
+> *(Note for Zavier: Take a snippet of a text editor showing your raw URL processed into this safely defanged version).*
 
-> *(Note for you: Take a screenshot of a text editor (like Notepad) showing the original malicious URL next to your safely defanged version.)*
-
-
-
-### 4. Infrastructure Threat Scanning
-
-With the true IP address and defanged links in hand, I queried VirusTotal to check the infrastructure against global security vendor databases.This confirmed whether the IP and domains were actively flagged as dangerous by other threat intelligence feeds.
-
-
+### 4. Threat Intelligence Reputation Audit
+With the target domain and resolved infrastructure IP identified, I queried VirusTotal to cross-reference the components against dozens of upstream security vendor databases. This scan provides data on whether global firewall networks, web proxies, and security providers have actively blacklisted this asset.
 
 > **[ 🖼️ INSERT SCREENSHOT 4 HERE ]**
-
-> *(Note for you: Grab a screenshot of the VirusTotal results showing the red flags, detection score, and malicious vendor alerts.)*
-
-
+> *(Note for Zavier: Grab a screenshot of your VirusTotal results page highlighting the red flags, detection ratio, and specific malicious categorizations).*
 
 ---
 
+## 📄 Final Deliverable
 
+### Security Incident Triage Report
+Utilizing the telemetry extracted during infrastructure tracking, I authored a corporate security triage brief. This report outlines the technical findings, active Indicators of Compromise (IOCs), and provides recommended firewall and proxy blocking configurations to defend an enterprise network.
 
-## Final Deliverable
-
-
-
-### Mock Incident Response Report
-
-Based on the extracted Indicators of Compromise (IOCs), I drafted a final incident report detailing the malicious IPs, domains, and the recommended defensive steps needed to block the threat actor from the network.
-
-
-
-> **[ 📄 INSERT LINK TO PDF HERE ]**
-
-> *(Note for you: Upload your final written incident report as a PDF into the GitHub folder, and link it here so hiring managers can read your actual analysis)*
+> **[ 📁 LINK TO YOUR COMPLETED REPORT PDF HERE ]**
+> *(Note for Zavier: Save your written report as a PDF, commit it to this GitHub directory, and link the file location right here).*
