@@ -14,8 +14,8 @@ Analyzing live phishing samples to extract Indicators of Compromise (IOCs), trac
 ### 1. Sourcing the Malicious Payload
 [cite_start]I began the by investigating a safe, real phishing website (hxxps://capital-trustblank[.]online/) from PhishTank to investigate a live, real-world sample[cite: 113, 344].
 
-> **[ 🖼️ INSERT SCREENSHOT 1 HERE ]**
-> *(Note for you: Take a screenshot of the PhishTank page showing the specific phishing email submission you chose to analyze.)*
+<img width="2850" height="1557" alt="image" src="https://github.com/user-attachments/assets/ff4ddae2-e31e-458f-9131-42a4d2482926" />
+
 
 ### 2. Header Extraction & IP Tracing
 [cite_start]To uncover the sender's true identity, I extracted the email headers and pasted them into MXToolbox[cite: 114, 345]. [cite_start]This allowed me to bypass the spoofed "From" address and pinpoint the actual server IP address that dispatched the malicious email[cite: 114].
