@@ -55,5 +55,24 @@ To ensure absolute safety during documentation and prevent accidental execution 
 ### Security Incident Triage Report
 Utilizing the telemetry extracted during infrastructure tracking, I authored a corporate security triage brief. This report outlines the technical findings, active Indicators of Compromise (IOCs), and provides recommended firewall and proxy blocking configurations to defend an enterprise network.
 
-> **[ 📁 LINK TO YOUR COMPLETED REPORT PDF HERE ]**
-> *(Note for Zavier: Save your written report as a PDF, commit it to this GitHub directory, and link the file location right here).*
+
+
+## 🧰 Technical Scope & Tools
+* **Threat Sourcing:** Sourced from live malicious data streams under PhishTank Submission #9458368 targeting financial/trust institutions via root domain `capital-trustblank.online`.
+* **Tool Stack utilized for Triage:** VirusTotal (Threat Intel & Global Blacklists) and MXToolbox (DNS A-Record and Domain Security Verification).
+
+---
+
+## 📑 Core Deliverable
+
+The comprehensive lifecycle breakdown of this incident—including infrastructure tracing, resolved host IP telemetry (`46.202.182[.]41`), SSL certificate trust chain metrics, and actionable defensive firewall/proxy blocking configurations—is documented inside the official security triage report.
+
+### 📄 [DOWNLOAD THE COMPLETED INCIDENT REPORT (PDF)](Phishing_Incident_Mock_Report.pdf)
+
+---
+
+## 🔍 Executive Brief Summary
+
+* **Incident Identification:** Active brand impersonation landing space discovered hosted on budget shared-hosting infrastructure (**Hostinger International - AS47583**).
+* **Defensive Evasion Patterns:** Threat actor deployed an ephemeral 90-day automated SSL certificate via Let's Encrypt to simulate cryptographic validity while mapping out public anti-spoofing **DMARC records** specifically to trick inbound automated email security gateways.
+* **Remediation Strategy:** The final brief outlines operational block requests for network boundary firewalls, secure web gateway proxy routing rules, and inbound message transport parameters to ensure total organizational isolation from the threat vector.
