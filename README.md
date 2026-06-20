@@ -45,8 +45,8 @@ To ensure absolute safety during documentation and prevent accidental execution 
 * **Raw Malicious URL:** `https://capital-trustblank.online/`
 * **Defanged Operational URL:** `hxxps://capital-trustblank[.]online/`
 
-> **[ 🖼️ INSERT SCREENSHOT 4 HERE ]**
-> *(Note for Zavier: Take a snippet of a text editor showing your raw URL processed into this safely defanged version).*
+<img width="1851" height="991" alt="image" src="https://github.com/user-attachments/assets/27d44796-a1ce-4fb0-8862-c0ec6d24adc9" />
+
 
 ---
 
